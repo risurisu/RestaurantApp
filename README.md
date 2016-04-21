@@ -1,2 +1,3 @@
 # RestaurantApp
-Second GA project 
+
+Second GA project

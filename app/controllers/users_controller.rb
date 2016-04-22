@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-include SessionsHelper
+# include SessionsHelper
 
 def create
   User.create(user_params)

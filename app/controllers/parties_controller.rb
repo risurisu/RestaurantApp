@@ -38,7 +38,7 @@ class PartiesController < ApplicationController
   private
 
   def party_params
-    params.require(:party).permit(#cust_id and table_id?)
+    params.require(:party).permit(:customer_id, :table_id?)
   end
 
 

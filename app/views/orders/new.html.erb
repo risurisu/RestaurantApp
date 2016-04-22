@@ -1,0 +1,13 @@
+<h1>Create a new order</h1>
+
+<%= form_for @order do |f| %>
+
+  <%= f.label :party_id %>
+  <%= f.select( :party_id, options_for_select(@parties.map {|party| [party.name, party.id ]}) ) %>
+  <!-- <%#= f.select( :astronaut_id, options_for_select([ 1,2,3] ) )%> -->
+  <br>
+  <%= f.label :food_id %>
+  <%= f.select( :food_id, options_for_select( @foods.map{ |food| [food.name, food.id ]}) ) %>
+  <br>
+  <%= f.submit %>
+<% end %>

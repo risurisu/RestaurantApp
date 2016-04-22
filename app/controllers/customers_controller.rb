@@ -1,5 +1,7 @@
 class CustomersController < ApplicationController
 
+    before_action :authenticate!
+
     def index
       @acustomer = Customer.all
     end
@@ -37,11 +39,11 @@ class CustomersController < ApplicationController
   private
 
   def customer_params
-    #define 
+    params.require(:customer).permit(:name)
   end
 
 
-  end
+
 
 
 

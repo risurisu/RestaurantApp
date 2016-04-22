@@ -5,9 +5,11 @@ root 'welcome#index'
 get '/users/profile' => 'users#profile', as: :profile
 get '/users/log_in' => 'users#log_in', as: :log_in
 resources :users, only: [:new, :create]
+
 post '/sessions' => 'sessions#create'
 delete '/sessions' => 'sessions#destroy'
 
+resources :customers 
 
 
 
